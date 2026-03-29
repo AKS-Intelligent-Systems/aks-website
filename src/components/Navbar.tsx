@@ -24,17 +24,17 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-background/80 backdrop-blur-xl border-b border-bloom/30"
+          ? "bg-white/80 backdrop-blur-xl border-b border-blush/60 shadow-sm"
           : "bg-transparent"
       }`}
     >
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <Link href="/" className="flex items-center gap-2.5">
-            <div className="h-8 w-8 rounded-lg bg-plum flex items-center justify-center">
+            <div className="h-8 w-8 rounded-lg bg-rose flex items-center justify-center">
               <span className="text-white font-bold text-sm">A</span>
             </div>
-            <span className="text-[14px] font-bold text-plum tracking-tight">
+            <span className="text-[14px] font-bold text-plum">
               AKS & Associates
             </span>
           </Link>
@@ -44,7 +44,7 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-[13px] font-medium text-plum/65 hover:text-plum transition-colors duration-200"
+                className="text-[13px] font-medium text-plum/60 hover:text-plum transition-colors duration-200"
               >
                 {link.label}
               </a>
@@ -54,7 +54,7 @@ export default function Navbar() {
           <div className="hidden md:block">
             <a
               href="#contact"
-              className="inline-flex items-center gap-1.5 px-5 py-2 bg-plum text-white text-[13px] font-medium rounded-xl hover:bg-plum/80 transition-colors shadow-md shadow-plum/15"
+              className="inline-flex items-center gap-1.5 px-5 py-2 bg-plum text-white text-[13px] font-medium rounded-xl hover:bg-plum/85 transition-colors shadow-sm"
             >
               Get in Touch
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -65,7 +65,7 @@ export default function Navbar() {
 
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="md:hidden p-2 text-plum/60"
+            className="md:hidden p-2 text-plum"
             aria-label="Toggle menu"
           >
             {mobileOpen ? (
@@ -82,14 +82,14 @@ export default function Navbar() {
       </div>
 
       {mobileOpen && (
-        <div className="md:hidden bg-background/95 backdrop-blur-xl border-t border-bloom/30">
+        <div className="md:hidden bg-white/95 backdrop-blur-xl border-t border-blush/50">
           <div className="px-6 py-4 space-y-1">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileOpen(false)}
-                className="block text-[13px] font-medium text-plum/50 hover:text-plum py-2.5 transition-colors"
+                className="block text-[13px] font-medium text-plum/60 hover:text-plum py-2.5 transition-colors"
               >
                 {link.label}
               </a>

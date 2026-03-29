@@ -12,14 +12,9 @@ interface Particle {
   color: string;
 }
 
-const COLORS = [
-  "var(--rose)",
-  "var(--petal)",
-  "var(--bloom)",
-  "var(--mauve)",
-];
+const COLORS = ["var(--rose)", "var(--petal)", "var(--mauve)", "var(--blush)"];
 
-export default function FloatingParticles({ count = 14 }: { count?: number }) {
+export default function FloatingParticles({ count = 12 }: { count?: number }) {
   const [particles, setParticles] = useState<Particle[]>([]);
 
   useEffect(() => {
@@ -27,10 +22,10 @@ export default function FloatingParticles({ count = 14 }: { count?: number }) {
       Array.from({ length: count }, (_, i) => ({
         id: i,
         left: Math.random() * 100,
-        size: 3 + Math.random() * 6,
+        size: 3 + Math.random() * 5,
         duration: 14 + Math.random() * 16,
         delay: Math.random() * 12,
-        opacity: 0.12 + Math.random() * 0.2,
+        opacity: 0.15 + Math.random() * 0.2,
         color: COLORS[Math.floor(Math.random() * COLORS.length)],
       }))
     );
@@ -52,7 +47,6 @@ export default function FloatingParticles({ count = 14 }: { count?: number }) {
             backgroundColor: p.color,
             opacity: p.opacity,
             animation: `float-up ${p.duration}s ease-in-out ${p.delay}s infinite`,
-            filter: "blur(0.5px)",
           }}
         />
       ))}

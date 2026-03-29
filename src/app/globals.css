@@ -1,17 +1,16 @@
 @import "tailwindcss";
 
 :root {
-  --background: #F5E6E8;
-  --foreground: #594246;
-  --blush: #E8C0C4;
+  --background: #FFFBF9;
+  --foreground: #2D1F21;
+  --blush: #F2D0D3;
   --rose: #F2778D;
   --pink: #F291A3;
   --mauve: #BF7A94;
-  --plum: #594246;
+  --plum: #2D1F21;
   --petal: #F2B6C1;
-  --bloom: #E8A8B4;
-  --midnight: #010D00;
-  --cream: #F0D4D8;
+  --bloom: #F9E8EB;
+  --midnight: #1A1216;
 }
 
 @theme inline {
@@ -25,7 +24,6 @@
   --color-petal: var(--petal);
   --color-bloom: var(--bloom);
   --color-midnight: var(--midnight);
-  --color-cream: var(--cream);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -45,13 +43,13 @@ body {
   color: white;
 }
 
-/* ── Dot grid pattern ── */
+/* ── Dot grid ── */
 .dot-grid-bg {
-  background-image: radial-gradient(circle, var(--mauve) 0.7px, transparent 0.7px);
-  background-size: 24px 24px;
+  background-image: radial-gradient(circle, var(--plum) 0.6px, transparent 0.6px);
+  background-size: 28px 28px;
 }
 
-/* ── Float animations ── */
+/* ── Animations ── */
 @keyframes float-up {
   0% { transform: translateY(0) translateX(0) scale(1); opacity: 0; }
   10% { opacity: 1; }
@@ -70,23 +68,10 @@ body {
 }
 
 @keyframes gentle-pulse {
-  0%, 100% { opacity: 0.3; transform: scale(1); }
-  50% { opacity: 0.5; transform: scale(1.04); }
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.04); }
 }
 
-/* ── Gradient mesh ── */
-@keyframes mesh-shift {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-}
-
-/* ── Fade-in on scroll ── */
-@keyframes fade-in-up {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* ── Marquee ── */
 @keyframes marquee-scroll {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
@@ -99,26 +84,4 @@ body {
 
 .marquee-strip:hover {
   animation-play-state: paused;
-}
-
-/* ── Headline shimmer ── */
-@keyframes shimmer {
-  0% { background-position: -200% center; }
-  100% { background-position: 200% center; }
-}
-
-.hero-headline-shimmer {
-  background: linear-gradient(
-    90deg,
-    var(--plum) 0%,
-    var(--plum) 40%,
-    var(--rose) 50%,
-    var(--plum) 60%,
-    var(--plum) 100%
-  );
-  background-size: 200% 100%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: shimmer 6s ease-in-out infinite;
 }

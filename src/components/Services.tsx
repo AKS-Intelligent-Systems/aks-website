@@ -35,7 +35,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="scroll-mt-20 border-t border-bloom/20 py-16 sm:py-24 px-4 sm:px-6 lg:px-8">
+    <section id="services" className="scroll-mt-20 border-t border-blush/50 py-16 sm:py-24 px-4 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-5xl">
         <ScrollReveal>
           <h2 className="text-[24px] sm:text-[30px] font-bold text-plum leading-[1.2] tracking-[-0.02em] mb-14 max-w-md">
@@ -44,11 +44,11 @@ export default function Services() {
         </ScrollReveal>
 
         <div className="space-y-4">
-          {/* Top row — 2 big cards */}
+          {/* Top row — 2 accent cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {services.slice(0, 2).map((s, i) => (
               <ScrollReveal key={s.title} delay={i * 80}>
-                <div className="rounded-2xl bg-plum p-8 sm:p-10 group">
+                <div className="rounded-2xl bg-plum p-8 sm:p-10">
                   <div className="text-white/50 mb-6">{s.icon}</div>
                   <h3 className="text-[18px] font-semibold text-white mb-2">{s.title}</h3>
                   <p className="text-[13px] text-white/55 leading-[1.7]">{s.description}</p>
@@ -57,14 +57,14 @@ export default function Services() {
             ))}
           </div>
 
-          {/* Bottom row — 4 smaller cards */}
+          {/* Bottom row — 4 light cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {services.slice(2).map((s, i) => (
               <ScrollReveal key={s.title} delay={(i + 2) * 80}>
-                <div className="rounded-2xl border border-bloom/40 bg-white/50 backdrop-blur-sm p-6 hover:border-bloom/60 hover:bg-white/70 transition-all duration-300">
-                  <div className="text-plum/50 mb-4">{s.icon}</div>
-                  <h3 className="text-[14px] font-semibold text-plum/90 mb-1">{s.title}</h3>
-                  <p className="text-[12px] text-plum/55 leading-[1.65]">{s.description}</p>
+                <div className="rounded-2xl border border-blush/60 bg-white p-6 hover:border-rose/30 hover:shadow-md transition-all duration-300">
+                  <div className="text-rose/70 mb-4">{s.icon}</div>
+                  <h3 className="text-[14px] font-semibold text-plum mb-1">{s.title}</h3>
+                  <p className="text-[12px] text-plum/50 leading-[1.65]">{s.description}</p>
                 </div>
               </ScrollReveal>
             ))}
