@@ -27,13 +27,13 @@ export default function About() {
       <div className="max-w-5xl mx-auto">
         <ScrollReveal>
           <div className="max-w-2xl mb-14">
-            <p className="text-[11px] font-medium text-rose/50 tracking-[0.2em] uppercase mb-4">
+            <p className="text-[11px] font-medium text-rose tracking-[0.2em] uppercase mb-4">
               How We Work
             </p>
-            <h2 className="text-[24px] sm:text-[30px] font-bold text-plum/80 leading-[1.2] tracking-[-0.02em] mb-4">
+            <h2 className="text-[24px] sm:text-[30px] font-bold text-plum leading-[1.2] tracking-[-0.02em] mb-4">
               Three steps to lasting impact.
             </h2>
-            <p className="text-[14px] text-plum/35 leading-[1.7] max-w-md">
+            <p className="text-[14px] text-plum/60 leading-[1.7] max-w-md">
               We bring together deep expertise across legal, financial, and strategic disciplines to serve your business holistically.
             </p>
           </div>
@@ -49,14 +49,14 @@ export default function About() {
                     : ""
                 } ${i === 0 ? "md:pl-0" : ""}`}
               >
-                <span className="text-[36px] sm:text-[42px] font-bold text-bloom/40 leading-none shrink-0">
+                <span className="text-[36px] sm:text-[42px] font-bold text-bloom leading-none shrink-0">
                   {step.n}
                 </span>
                 <div className="pt-1">
-                  <h3 className="text-[16px] font-semibold text-plum/70 mb-1.5">
+                  <h3 className="text-[16px] font-semibold text-plum mb-1.5">
                     {step.title}
                   </h3>
-                  <p className="text-[13px] text-plum/30 leading-[1.7]">
+                  <p className="text-[13px] text-plum/60 leading-[1.7]">
                     {step.desc}
                   </p>
                 </div>

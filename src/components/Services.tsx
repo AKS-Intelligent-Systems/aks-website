@@ -38,7 +38,7 @@ export default function Services() {
     <section id="services" className="scroll-mt-20 border-t border-bloom/20 py-16 sm:py-24 px-4 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-5xl">
         <ScrollReveal>
-          <h2 className="text-[24px] sm:text-[30px] font-bold text-plum/80 leading-[1.2] tracking-[-0.02em] mb-14 max-w-md">
+          <h2 className="text-[24px] sm:text-[30px] font-bold text-plum leading-[1.2] tracking-[-0.02em] mb-14 max-w-md">
             Built for businesses who demand excellence.
           </h2>
         </ScrollReveal>
@@ -49,9 +49,9 @@ export default function Services() {
             {services.slice(0, 2).map((s, i) => (
               <ScrollReveal key={s.title} delay={i * 80}>
                 <div className="rounded-2xl bg-plum p-8 sm:p-10 group">
-                  <div className="text-white/40 mb-6">{s.icon}</div>
+                  <div className="text-white/50 mb-6">{s.icon}</div>
                   <h3 className="text-[18px] font-semibold text-white mb-2">{s.title}</h3>
-                  <p className="text-[13px] text-white/40 leading-[1.7]">{s.description}</p>
+                  <p className="text-[13px] text-white/55 leading-[1.7]">{s.description}</p>
                 </div>
               </ScrollReveal>
             ))}
@@ -61,10 +61,10 @@ export default function Services() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {services.slice(2).map((s, i) => (
               <ScrollReveal key={s.title} delay={(i + 2) * 80}>
-                <div className="rounded-2xl border border-bloom/25 bg-cream/40 backdrop-blur-sm p-6 hover:border-bloom/50 hover:bg-cream/70 transition-all duration-300">
-                  <div className="text-plum/30 mb-4">{s.icon}</div>
-                  <h3 className="text-[14px] font-semibold text-plum/70 mb-1">{s.title}</h3>
-                  <p className="text-[12px] text-plum/30 leading-[1.65]">{s.description}</p>
+                <div className="rounded-2xl border border-bloom/40 bg-white/50 backdrop-blur-sm p-6 hover:border-bloom/60 hover:bg-white/70 transition-all duration-300">
+                  <div className="text-plum/50 mb-4">{s.icon}</div>
+                  <h3 className="text-[14px] font-semibold text-plum/90 mb-1">{s.title}</h3>
+                  <p className="text-[12px] text-plum/55 leading-[1.65]">{s.description}</p>
                 </div>
               </ScrollReveal>
             ))}

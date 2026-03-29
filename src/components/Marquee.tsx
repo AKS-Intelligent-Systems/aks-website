@@ -19,10 +19,10 @@ export default function Marquee() {
       <div className="marquee-strip flex w-max gap-6">
         {doubled.map((item, i) => (
           <span key={`${item}-${i}`} className="flex items-center gap-4 shrink-0">
-            <span className="text-[14px] sm:text-[15px] font-semibold text-plum/50 whitespace-nowrap">
+            <span className="text-[14px] sm:text-[15px] font-semibold text-plum/70 whitespace-nowrap">
               {item}
             </span>
-            <span className="h-1 w-1 rounded-full bg-rose/30" />
+            <span className="h-1 w-1 rounded-full bg-rose/60" />
           </span>
         ))}
       </div>

@@ -10,7 +10,7 @@ export default function CtaBanner() {
               <h2 className="text-[20px] sm:text-[24px] font-bold text-white leading-tight tracking-[-0.01em]">
                 Ready to transform your business?
               </h2>
-              <p className="text-[13px] text-white/35 mt-1">
+              <p className="text-[13px] text-white/55 mt-1">
                 Free consultation · No obligations · Results-driven approach
               </p>
             </div>

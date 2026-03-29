@@ -16,12 +16,12 @@ export default function Stats() {
             {stats.map((stat) => (
               <div
                 key={stat.label}
-                className="rounded-xl border border-bloom/25 bg-cream/40 backdrop-blur-sm px-5 py-5 text-center"
+                className="rounded-xl border border-bloom/40 bg-white/50 backdrop-blur-sm px-5 py-5 text-center"
               >
-                <p className="text-[22px] sm:text-[26px] font-bold text-plum/80 tracking-tight leading-none">
+                <p className="text-[22px] sm:text-[26px] font-bold text-plum tracking-tight leading-none">
                   {stat.value}
                 </p>
-                <p className="text-[11px] text-plum/30 mt-2 font-medium uppercase tracking-[0.15em]">
+                <p className="text-[11px] text-plum/55 mt-2 font-medium uppercase tracking-[0.15em]">
                   {stat.label}
                 </p>
               </div>

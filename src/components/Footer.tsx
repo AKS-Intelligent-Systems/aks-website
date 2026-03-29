@@ -6,14 +6,14 @@ export default function Footer() {
           <div className="h-5 w-5 rounded bg-plum flex items-center justify-center">
             <span className="text-[8px] font-bold text-white leading-none">A</span>
           </div>
-          <span className="text-[14px] font-bold text-plum/70">AKS & Associates</span>
+          <span className="text-[14px] font-bold text-plum">AKS & Associates</span>
         </div>
-        <div className="flex items-center gap-6 text-[13px] font-medium text-plum/30">
-          <a href="#services" className="hover:text-plum/60 transition-colors">Services</a>
-          <a href="#about" className="hover:text-plum/60 transition-colors">About</a>
-          <a href="mailto:hello@aksassociates.com" className="hover:text-plum/60 transition-colors">Contact</a>
+        <div className="flex items-center gap-6 text-[13px] font-medium text-plum/55">
+          <a href="#services" className="hover:text-plum transition-colors">Services</a>
+          <a href="#about" className="hover:text-plum transition-colors">About</a>
+          <a href="mailto:hello@aksassociates.com" className="hover:text-plum transition-colors">Contact</a>
         </div>
-        <span className="text-[12px] text-plum/20">
+        <span className="text-[12px] text-plum/40">
           &copy; {new Date().getFullYear()} AKS & Associates LLP
         </span>
       </div>
