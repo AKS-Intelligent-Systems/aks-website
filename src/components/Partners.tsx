@@ -9,7 +9,7 @@ const partners = [
   "Adani Group",
   "Bajaj Finserv",
   "Godrej",
-  "Larsen & Toubro",
+  "L&T",
   "HDFC Bank",
 ];
 
@@ -17,25 +17,22 @@ export default function Partners() {
   const doubled = [...partners, ...partners];
 
   return (
-    <section id="partners" className="py-20 relative">
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-petal/40 to-transparent" />
-
+    <section id="partners" className="border-t border-bloom/20 py-14 px-4 sm:px-6 lg:px-8">
       <ScrollReveal>
-        <p className="text-center text-[11px] font-medium text-plum/25 tracking-[0.2em] uppercase mb-12">
+        <p className="text-center text-[11px] font-medium text-plum/25 tracking-[0.2em] uppercase mb-10">
           Trusted by industry leaders
         </p>
       </ScrollReveal>
 
       <div className="relative overflow-hidden">
-        {/* Fade edges */}
-        <div className="pointer-events-none absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-background to-transparent z-10" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-background to-transparent z-10" />
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-background to-transparent z-10" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-background to-transparent z-10" />
 
-        <div className="marquee-track flex items-center gap-16 w-max">
+        <div className="marquee-strip flex items-center gap-14 w-max">
           {doubled.map((partner, i) => (
             <span
               key={`${partner}-${i}`}
-              className="text-lg font-semibold text-plum/10 hover:text-plum/25 transition-colors duration-300 whitespace-nowrap select-none"
+              className="text-[16px] font-semibold text-plum/15 hover:text-plum/30 transition-colors duration-300 whitespace-nowrap select-none"
             >
               {partner}
             </span>

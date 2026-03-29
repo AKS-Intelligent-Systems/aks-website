@@ -1,17 +1,17 @@
 @import "tailwindcss";
 
 :root {
-  --background: #FFF7F8;
+  --background: #F5E6E8;
   --foreground: #594246;
-  --blush: #F2D0D3;
+  --blush: #E8C0C4;
   --rose: #F2778D;
   --pink: #F291A3;
   --mauve: #BF7A94;
   --plum: #594246;
   --petal: #F2B6C1;
-  --bloom: #F2BBC9;
+  --bloom: #E8A8B4;
   --midnight: #010D00;
-  --cream: #FFF0F2;
+  --cream: #F0D4D8;
 }
 
 @theme inline {
@@ -41,96 +41,84 @@ body {
 }
 
 ::selection {
-  background-color: var(--petal);
-  color: var(--plum);
+  background-color: var(--rose);
+  color: white;
 }
 
-/* ── Floating particles ── */
+/* ── Dot grid pattern ── */
+.dot-grid-bg {
+  background-image: radial-gradient(circle, var(--mauve) 0.7px, transparent 0.7px);
+  background-size: 24px 24px;
+}
+
+/* ── Float animations ── */
 @keyframes float-up {
-  0% {
-    transform: translateY(0) translateX(0) scale(1);
-    opacity: 0;
-  }
-  10% {
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-100vh) translateX(40px) scale(0.5);
-    opacity: 0;
-  }
+  0% { transform: translateY(0) translateX(0) scale(1); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(-100vh) translateX(30px) scale(0.5); opacity: 0; }
 }
 
-@keyframes float-drift {
-  0%, 100% {
-    transform: translateY(0) translateX(0);
-  }
-  25% {
-    transform: translateY(-20px) translateX(10px);
-  }
-  50% {
-    transform: translateY(-10px) translateX(-8px);
-  }
-  75% {
-    transform: translateY(-30px) translateX(15px);
-  }
+@keyframes float-a {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
 }
 
-/* ── Gradient mesh animation ── */
+@keyframes float-b {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes gentle-pulse {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.04); }
+}
+
+/* ── Gradient mesh ── */
 @keyframes mesh-shift {
-  0%, 100% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
 }
 
 /* ── Fade-in on scroll ── */
 @keyframes fade-in-up {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animate-fade-in-up {
-  animation: fade-in-up 0.8s ease-out forwards;
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* ── Marquee ── */
-@keyframes marquee {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 
-.marquee-track {
-  animation: marquee 30s linear infinite;
+.marquee-strip {
+  animation: marquee-scroll 25s linear infinite;
   will-change: transform;
 }
 
-.marquee-track:hover {
+.marquee-strip:hover {
   animation-play-state: paused;
 }
 
-/* ── Gentle pulse ── */
-@keyframes gentle-pulse {
-  0%, 100% {
-    opacity: 0.4;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.7;
-    transform: scale(1.05);
-  }
+/* ── Headline shimmer ── */
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.hero-headline-shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--plum) 0%,
+    var(--plum) 40%,
+    var(--rose) 50%,
+    var(--plum) 60%,
+    var(--plum) 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 6s ease-in-out infinite;
 }

@@ -1,32 +1,29 @@
 import ScrollReveal from "./ScrollReveal";
 
 const stats = [
-  { value: "500+", label: "Clients Served" },
-  { value: "15+", label: "Years Experience" },
-  { value: "98%", label: "Client Retention" },
+  { value: "500+", label: "Clients" },
+  { value: "15+", label: "Years" },
+  { value: "98%", label: "Retention" },
   { value: "50+", label: "Industries" },
 ];
 
 export default function Stats() {
   return (
-    <section className="relative py-16">
-      <div className="mx-auto max-w-5xl px-6 lg:px-8">
+    <section className="py-14 px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-5xl">
         <ScrollReveal>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-            {stats.map((stat, i) => (
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
+            {stats.map((stat) => (
               <div
                 key={stat.label}
-                className="text-center rounded-2xl border border-petal/30 bg-white/40 backdrop-blur-sm p-6"
-                style={{
-                  animationDelay: `${i * 100}ms`,
-                }}
+                className="rounded-xl border border-bloom/25 bg-cream/40 backdrop-blur-sm px-5 py-5 text-center"
               >
-                <div className="text-3xl sm:text-4xl font-bold bg-gradient-to-br from-rose to-mauve bg-clip-text text-transparent tracking-tight">
+                <p className="text-[22px] sm:text-[26px] font-bold text-plum/80 tracking-tight leading-none">
                   {stat.value}
-                </div>
-                <div className="mt-1.5 text-[11px] font-medium text-plum/30 tracking-[0.15em] uppercase">
+                </p>
+                <p className="text-[11px] text-plum/30 mt-2 font-medium uppercase tracking-[0.15em]">
                   {stat.label}
-                </div>
+                </p>
               </div>
             ))}
           </div>

@@ -16,11 +16,10 @@ const COLORS = [
   "var(--rose)",
   "var(--petal)",
   "var(--bloom)",
-  "var(--pink)",
-  "var(--blush)",
+  "var(--mauve)",
 ];
 
-export default function FloatingParticles({ count = 18 }: { count?: number }) {
+export default function FloatingParticles({ count = 14 }: { count?: number }) {
   const [particles, setParticles] = useState<Particle[]>([]);
 
   useEffect(() => {
@@ -28,10 +27,10 @@ export default function FloatingParticles({ count = 18 }: { count?: number }) {
       Array.from({ length: count }, (_, i) => ({
         id: i,
         left: Math.random() * 100,
-        size: 4 + Math.random() * 8,
-        duration: 12 + Math.random() * 18,
-        delay: Math.random() * 15,
-        opacity: 0.15 + Math.random() * 0.3,
+        size: 3 + Math.random() * 6,
+        duration: 14 + Math.random() * 16,
+        delay: Math.random() * 12,
+        opacity: 0.12 + Math.random() * 0.2,
         color: COLORS[Math.floor(Math.random() * COLORS.length)],
       }))
     );
@@ -47,13 +46,13 @@ export default function FloatingParticles({ count = 18 }: { count?: number }) {
           className="absolute rounded-full"
           style={{
             left: `${p.left}%`,
-            bottom: "-20px",
+            bottom: "-10px",
             width: p.size,
             height: p.size,
             backgroundColor: p.color,
             opacity: p.opacity,
             animation: `float-up ${p.duration}s ease-in-out ${p.delay}s infinite`,
-            filter: "blur(1px)",
+            filter: "blur(0.5px)",
           }}
         />
       ))}

@@ -1,96 +1,68 @@
 import ScrollReveal from "./ScrollReveal";
 
+const steps = [
+  {
+    n: "1",
+    title: "Consult",
+    desc: "We listen deeply, understand your challenges, and map out a tailored strategy for your organisation.",
+  },
+  {
+    n: "2",
+    title: "Execute",
+    desc: "Our multidisciplinary team implements solutions across legal, financial, and strategic dimensions.",
+  },
+  {
+    n: "3",
+    title: "Grow",
+    desc: "We stay by your side as a long-term partner, adapting strategy as your business evolves and scales.",
+  },
+];
+
 export default function About() {
   return (
-    <section id="about" className="py-24 sm:py-32 relative overflow-hidden">
-      <div className="absolute inset-0 -z-10">
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "radial-gradient(ellipse at 70% 50%, rgba(242, 208, 211, 0.3) 0%, transparent 60%)",
-          }}
-        />
-      </div>
+    <section
+      id="about"
+      className="scroll-mt-20 border-t border-bloom/20 py-16 sm:py-24 px-4 sm:px-6 lg:px-8"
+    >
+      <div className="max-w-5xl mx-auto">
+        <ScrollReveal>
+          <div className="max-w-2xl mb-14">
+            <p className="text-[11px] font-medium text-rose/50 tracking-[0.2em] uppercase mb-4">
+              How We Work
+            </p>
+            <h2 className="text-[24px] sm:text-[30px] font-bold text-plum/80 leading-[1.2] tracking-[-0.02em] mb-4">
+              Three steps to lasting impact.
+            </h2>
+            <p className="text-[14px] text-plum/35 leading-[1.7] max-w-md">
+              We bring together deep expertise across legal, financial, and strategic disciplines to serve your business holistically.
+            </p>
+          </div>
+        </ScrollReveal>
 
-      <div className="mx-auto max-w-5xl px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <ScrollReveal>
-            <div>
-              <p className="text-[11px] font-medium text-rose/60 tracking-[0.2em] uppercase mb-4">
-                About Us
-              </p>
-              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-plum/80 leading-tight">
-                Built on trust.
-                <br />
-                <span className="bg-gradient-to-r from-rose to-mauve bg-clip-text text-transparent">
-                  Driven by results.
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
+          {steps.map((step, i) => (
+            <ScrollReveal key={step.n} delay={i * 120}>
+              <div
+                className={`flex items-start gap-4 py-8 md:px-8 ${
+                  i < steps.length - 1
+                    ? "border-b md:border-b-0 md:border-r border-bloom/25"
+                    : ""
+                } ${i === 0 ? "md:pl-0" : ""}`}
+              >
+                <span className="text-[36px] sm:text-[42px] font-bold text-bloom/40 leading-none shrink-0">
+                  {step.n}
                 </span>
-              </h2>
-              <p className="mt-6 text-[15px] text-plum/35 leading-[1.8]">
-                AKS & Associates LLP is a multidisciplinary professional
-                services firm that partners with businesses to solve complex
-                challenges. With over 15 years of collective experience, our
-                team brings together lawyers, strategists, and financial
-                advisors under one roof.
-              </p>
-              <p className="mt-4 text-[15px] text-plum/35 leading-[1.8]">
-                We believe in building long-term relationships grounded in
-                transparency, expertise, and a genuine commitment to our
-                clients&apos; success.
-              </p>
-            </div>
-          </ScrollReveal>
-
-          <ScrollReveal delay={200}>
-            <div className="relative">
-              <div className="rounded-3xl border border-petal/30 bg-gradient-to-br from-cream/80 via-white/60 to-blush/40 backdrop-blur-sm p-10 relative overflow-hidden">
-                {/* Decorative orb inside card */}
-                <div className="absolute -top-10 -right-10 w-40 h-40 rounded-full bg-rose/8 blur-3xl" />
-
-                <div className="grid grid-cols-2 gap-5 mb-8 relative z-10">
-                  <div className="rounded-xl border border-petal/20 bg-white/50 p-5">
-                    <div className="text-2xl font-bold bg-gradient-to-br from-rose to-mauve bg-clip-text text-transparent">
-                      50+
-                    </div>
-                    <div className="mt-1 text-[11px] text-plum/30 tracking-wide">
-                      Expert advisors
-                    </div>
-                  </div>
-                  <div className="rounded-xl border border-petal/20 bg-white/50 p-5">
-                    <div className="text-2xl font-bold bg-gradient-to-br from-rose to-mauve bg-clip-text text-transparent">
-                      12
-                    </div>
-                    <div className="mt-1 text-[11px] text-plum/30 tracking-wide">
-                      Offices across India
-                    </div>
-                  </div>
-                </div>
-
-                <div className="relative z-10">
-                  <svg
-                    width="28"
-                    height="28"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    className="text-rose/30 mb-4"
-                  >
-                    <path
-                      d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5 3.871 3.871 0 01-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5 3.871 3.871 0 01-2.748-1.179z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                  <blockquote className="text-[15px] text-plum/50 leading-[1.8] italic">
-                    Your success is our legacy. Every decision we guide
-                    is a step towards building something extraordinary.
-                  </blockquote>
-                  <div className="mt-4 text-[11px] font-medium text-mauve/50 tracking-wide">
-                    — AKS & Associates Leadership
-                  </div>
+                <div className="pt-1">
+                  <h3 className="text-[16px] font-semibold text-plum/70 mb-1.5">
+                    {step.title}
+                  </h3>
+                  <p className="text-[13px] text-plum/30 leading-[1.7]">
+                    {step.desc}
+                  </p>
                 </div>
               </div>
-            </div>
-          </ScrollReveal>
+            </ScrollReveal>
+          ))}
         </div>
       </div>
     </section>

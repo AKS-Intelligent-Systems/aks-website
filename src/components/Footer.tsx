@@ -1,90 +1,21 @@
-const footerLinks = {
-  Services: [
-    "Corporate Advisory",
-    "Legal Compliance",
-    "Business Strategy",
-    "Financial Consulting",
-  ],
-  Company: ["About", "Team", "Careers", "Contact"],
-  Resources: ["Blog", "Case Studies", "FAQs"],
-};
-
 export default function Footer() {
   return (
-    <footer
-      id="contact"
-      className="relative border-t border-petal/20 bg-cream/50"
-    >
-      <div className="mx-auto max-w-5xl px-6 lg:px-8 py-14">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
-          <div className="lg:col-span-2">
-            <div className="flex items-center gap-2.5">
-              <div className="h-7 w-7 rounded-lg bg-gradient-to-br from-rose to-mauve flex items-center justify-center">
-                <span className="text-white font-bold text-xs">A</span>
-              </div>
-              <span className="text-sm font-semibold text-plum/60 tracking-tight">
-                AKS & Associates
-              </span>
-            </div>
-            <p className="mt-4 text-[12px] text-plum/25 leading-relaxed max-w-xs">
-              A multidisciplinary professional services firm empowering
-              businesses with strategic consulting, legal advisory, and
-              growth solutions.
-            </p>
-            <div className="mt-5 flex gap-4">
-              {["LinkedIn", "Twitter", "Email"].map((social) => (
-                <a
-                  key={social}
-                  href="#"
-                  className="text-[11px] font-medium text-plum/20 hover:text-rose/60 transition-colors"
-                >
-                  {social}
-                </a>
-              ))}
-            </div>
+    <footer id="contact" className="border-t border-bloom/20 px-4 sm:px-6 lg:px-8 py-10">
+      <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-5">
+        <div className="flex items-center gap-2">
+          <div className="h-5 w-5 rounded bg-plum flex items-center justify-center">
+            <span className="text-[8px] font-bold text-white leading-none">A</span>
           </div>
-
-          {Object.entries(footerLinks).map(([category, links]) => (
-            <div key={category}>
-              <h3 className="text-[11px] font-semibold text-plum/40 tracking-[0.1em] uppercase">
-                {category}
-              </h3>
-              <ul className="mt-3 space-y-2">
-                {links.map((link) => (
-                  <li key={link}>
-                    <a
-                      href="#"
-                      className="text-[12px] text-plum/25 hover:text-rose/60 transition-colors"
-                    >
-                      {link}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          <span className="text-[14px] font-bold text-plum/70">AKS & Associates</span>
         </div>
-
-        <div className="mt-12 pt-6 border-t border-petal/15 flex flex-col sm:flex-row justify-between items-center gap-3">
-          <p className="text-[11px] text-plum/15">
-            &copy; {new Date().getFullYear()} AKS & Associates LLP. All rights
-            reserved.
-          </p>
-          <div className="flex gap-5">
-            <a
-              href="#"
-              className="text-[11px] text-plum/15 hover:text-plum/30 transition-colors"
-            >
-              Privacy
-            </a>
-            <a
-              href="#"
-              className="text-[11px] text-plum/15 hover:text-plum/30 transition-colors"
-            >
-              Terms
-            </a>
-          </div>
+        <div className="flex items-center gap-6 text-[13px] font-medium text-plum/30">
+          <a href="#services" className="hover:text-plum/60 transition-colors">Services</a>
+          <a href="#about" className="hover:text-plum/60 transition-colors">About</a>
+          <a href="mailto:hello@aksassociates.com" className="hover:text-plum/60 transition-colors">Contact</a>
         </div>
+        <span className="text-[12px] text-plum/20">
+          &copy; {new Date().getFullYear()} AKS & Associates LLP
+        </span>
       </div>
     </footer>
   );
