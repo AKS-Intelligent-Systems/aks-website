@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AKS & Associates LLP | Strategic Business Advisory",
+  title: "AKS Intelligent Systems LLP | AI Consultancy & Automation",
   description:
-    "Empowering businesses with strategic consulting, legal advisory, and growth solutions for modern enterprises.",
+    "AKS Intelligent Systems builds custom AI, automation, and efficiency solutions for enterprises. We solve business-specific operational problems through deployment-focused systems built for speed, scale, and practical impact.",
 };
 
 export default function RootLayout({

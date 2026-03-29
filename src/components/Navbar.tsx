@@ -6,7 +6,7 @@ import Link from "next/link";
 const navLinks = [
   { label: "Services", href: "#services" },
   { label: "About", href: "#about" },
-  { label: "Partners", href: "#partners" },
+  { label: "Leadership", href: "#leadership" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -35,7 +35,7 @@ export default function Navbar() {
               <span className="text-white font-bold text-sm">A</span>
             </div>
             <span className="text-[14px] font-bold text-plum">
-              AKS & Associates
+              AKS Intelligent Systems
             </span>
           </Link>
 

@@ -1,21 +1,62 @@
 export default function Footer() {
   return (
-    <footer id="contact" className="border-t border-blush/50 px-4 sm:px-6 lg:px-8 py-10">
-      <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-5">
-        <div className="flex items-center gap-2">
-          <div className="h-5 w-5 rounded bg-rose flex items-center justify-center">
-            <span className="text-[8px] font-bold text-white leading-none">A</span>
+    <footer className="border-t border-blush/50 px-4 sm:px-6 lg:px-8 py-10">
+      <div className="max-w-5xl mx-auto">
+        <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-8 mb-8">
+          <div>
+            <div className="flex items-center gap-2 mb-3">
+              <div className="h-5 w-5 rounded bg-rose flex items-center justify-center">
+                <span className="text-[8px] font-bold text-white leading-none">A</span>
+              </div>
+              <span className="text-[14px] font-bold text-plum">
+                AKS Intelligent Systems LLP
+              </span>
+            </div>
+            <p className="text-[12px] text-plum/40 leading-relaxed max-w-xs">
+              602, Sector 84, Antriksh Heights, Tower-AI,
+              <br />
+              Narsinghpur, Gurgaon — 122004, Haryana, India
+            </p>
           </div>
-          <span className="text-[14px] font-bold text-plum">AKS & Associates</span>
+
+          <div className="flex flex-col sm:flex-row gap-8">
+            <div>
+              <h4 className="text-[11px] font-semibold text-plum/50 uppercase tracking-wider mb-2">
+                Contact
+              </h4>
+              <div className="space-y-1">
+                <a href="mailto:info@aksisys.com" className="block text-[12px] text-plum/50 hover:text-plum transition-colors">
+                  info@aksisys.com
+                </a>
+                <a href="mailto:piyush@aksisys.com" className="block text-[12px] text-plum/50 hover:text-plum transition-colors">
+                  piyush@aksisys.com
+                </a>
+              </div>
+            </div>
+            <div>
+              <h4 className="text-[11px] font-semibold text-plum/50 uppercase tracking-wider mb-2">
+                Navigate
+              </h4>
+              <div className="space-y-1">
+                <a href="#services" className="block text-[12px] text-plum/50 hover:text-plum transition-colors">Services</a>
+                <a href="#about" className="block text-[12px] text-plum/50 hover:text-plum transition-colors">About</a>
+                <a href="#leadership" className="block text-[12px] text-plum/50 hover:text-plum transition-colors">Leadership</a>
+                <a href="#contact" className="block text-[12px] text-plum/50 hover:text-plum transition-colors">Contact</a>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="flex items-center gap-6 text-[13px] font-medium text-plum/50">
-          <a href="#services" className="hover:text-plum transition-colors">Services</a>
-          <a href="#about" className="hover:text-plum transition-colors">About</a>
-          <a href="mailto:hello@aksassociates.com" className="hover:text-plum transition-colors">Contact</a>
+
+        <div className="border-t border-blush/40 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <p className="text-[11px] text-plum/30">
+            &copy; {new Date().getFullYear()} AKS Intelligent Systems LLP. All rights reserved.
+          </p>
+          <div className="flex items-center gap-4 text-[10px] text-plum/25">
+            <span>LLPIN: ACW-4965</span>
+            <span>PAN: ACNFA7427J</span>
+            <span>TAN: RTKA34008C</span>
+          </div>
         </div>
-        <span className="text-[12px] text-plum/35">
-          &copy; {new Date().getFullYear()} AKS & Associates LLP
-        </span>
       </div>
     </footer>
   );

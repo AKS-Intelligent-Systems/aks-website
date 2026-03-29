@@ -1,14 +1,12 @@
 const items = [
-  "Corporate Advisory",
-  "Legal Compliance",
-  "Business Strategy",
-  "Financial Consulting",
-  "Dispute Resolution",
-  "Mergers & Acquisitions",
-  "Tax Optimisation",
-  "Regulatory Affairs",
-  "Fund Raising",
-  "IP Protection",
+  "Custom AI Solutions",
+  "Workflow Automation",
+  "Enterprise AI Systems",
+  "Process Optimization",
+  "Operational Dashboards",
+  "Document Automation",
+  "Data Automation",
+  "AI Consulting",
 ];
 
 export default function Marquee() {
