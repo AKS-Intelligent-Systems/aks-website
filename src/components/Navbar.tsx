@@ -82,22 +82,24 @@ export default function Navbar() {
       </div>
 
       {mobileOpen && (
-        <div className="md:hidden bg-white/95 backdrop-blur-xl border-t border-blush/50">
-          <div className="px-6 py-4 space-y-1">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                onClick={() => setMobileOpen(false)}
-                className="block text-[13px] font-medium text-plum/60 hover:text-plum py-2.5 transition-colors"
-              >
-                {link.label}
-              </a>
-            ))}
+        <div className="md:hidden fixed inset-x-0 top-16 bottom-0 bg-white/98 backdrop-blur-xl border-t border-blush/50 z-50">
+          <div className="px-6 py-6 space-y-1 flex flex-col h-full">
+            <div className="space-y-1">
+              {navLinks.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setMobileOpen(false)}
+                  className="block text-[15px] font-medium text-plum/70 hover:text-plum py-3 transition-colors border-b border-blush/30"
+                >
+                  {link.label}
+                </a>
+              ))}
+            </div>
             <a
               href="#contact"
               onClick={() => setMobileOpen(false)}
-              className="inline-flex items-center gap-1.5 bg-plum text-white px-5 py-2.5 rounded-xl text-[13px] font-medium mt-2"
+              className="flex items-center justify-center gap-1.5 bg-plum text-white px-5 py-3.5 rounded-xl text-[14px] font-semibold mt-4 w-full"
             >
               Get in Touch
             </a>

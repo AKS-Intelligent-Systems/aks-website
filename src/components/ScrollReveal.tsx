@@ -12,36 +12,58 @@ export default function ScrollReveal({
   delay?: number;
 }) {
   const ref = useRef<HTMLDivElement>(null);
+  const [ready, setReady] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
 
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.unobserve(el);
-        }
-      },
-      { threshold: 0.15 }
-    );
+    const rect = el.getBoundingClientRect();
 
-    observer.observe(el);
-    return () => observer.disconnect();
+    if (rect.top < window.innerHeight + 40) {
+      setIsVisible(true);
+      setReady(true);
+      return;
+    }
+
+    setReady(true);
+
+    let done = false;
+
+    const reveal = () => {
+      if (done) return;
+      const r = el.getBoundingClientRect();
+      if (r.top < window.innerHeight + 60) {
+        done = true;
+        setIsVisible(true);
+        window.removeEventListener("scroll", reveal);
+        window.removeEventListener("touchmove", reveal);
+        clearInterval(poll);
+      }
+    };
+
+    window.addEventListener("scroll", reveal, { passive: true });
+    window.addEventListener("touchmove", reveal, { passive: true });
+    const poll = setInterval(reveal, 400);
+
+    return () => {
+      window.removeEventListener("scroll", reveal);
+      window.removeEventListener("touchmove", reveal);
+      clearInterval(poll);
+    };
   }, []);
 
-  return (
-    <div
-      ref={ref}
-      className={className}
-      style={{
+  const style: React.CSSProperties | undefined = ready
+    ? {
         opacity: isVisible ? 1 : 0,
-        transform: isVisible ? "translateY(0)" : "translateY(30px)",
-        transition: `opacity 0.7s ease-out ${delay}ms, transform 0.7s ease-out ${delay}ms`,
-      }}
-    >
+        transform: isVisible ? "translateY(0)" : "translateY(20px)",
+        transition: `opacity 0.6s ease-out ${delay}ms, transform 0.6s ease-out ${delay}ms`,
+      }
+    : undefined;
+
+  return (
+    <div ref={ref} className={className} style={style}>
       {children}
     </div>
   );

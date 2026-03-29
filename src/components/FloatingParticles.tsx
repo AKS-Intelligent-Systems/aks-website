@@ -18,8 +18,10 @@ export default function FloatingParticles({ count = 12 }: { count?: number }) {
   const [particles, setParticles] = useState<Particle[]>([]);
 
   useEffect(() => {
+    const isMobile = window.innerWidth < 640;
+    const actualCount = isMobile ? Math.min(count, 6) : count;
     setParticles(
-      Array.from({ length: count }, (_, i) => ({
+      Array.from({ length: actualCount }, (_, i) => ({
         id: i,
         left: Math.random() * 100,
         size: 3 + Math.random() * 5,
