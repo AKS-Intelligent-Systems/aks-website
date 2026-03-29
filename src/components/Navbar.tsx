@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const navLinks = [
   { label: "Services", href: "#services" },
@@ -15,9 +16,30 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
+    if ("scrollRestoration" in history) {
+      history.scrollRestoration = "manual";
+    }
+    window.scrollTo(0, 0);
+
     const onScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+
+    const handleAnchorClick = (e: MouseEvent) => {
+      const anchor = (e.target as HTMLElement).closest('a[href^="#"]');
+      if (!anchor) return;
+      const id = anchor.getAttribute("href")!;
+      const el = document.querySelector(id);
+      if (el) {
+        e.preventDefault();
+        el.scrollIntoView({ behavior: "smooth" });
+      }
+    };
+    document.addEventListener("click", handleAnchorClick);
+
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      document.removeEventListener("click", handleAnchorClick);
+    };
   }, []);
 
   return (
@@ -30,11 +52,16 @@ export default function Navbar() {
     >
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
-          <Link href="/" className="flex items-center gap-2.5">
-            <div className="h-8 w-8 rounded-lg bg-rose flex items-center justify-center">
-              <span className="text-white font-bold text-sm">A</span>
-            </div>
-            <span className="text-[14px] font-bold text-plum">
+          <Link href="/" className="flex items-center gap-2">
+            <Image
+              src="/ask-logo-icon.png"
+              alt="AKS Intelligent Systems"
+              width={32}
+              height={32}
+              className="h-8 w-8 shrink-0 object-contain"
+              priority
+            />
+            <span className="text-[14px] font-bold text-plum leading-tight">
               AKS Intelligent Systems
             </span>
           </Link>

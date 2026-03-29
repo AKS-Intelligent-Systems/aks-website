@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Footer() {
   return (
     <footer className="border-t border-blush/50 px-4 sm:px-6 lg:px-8 py-8 sm:py-10">
@@ -5,10 +7,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-[1.5fr_1fr_1fr] gap-8 mb-8">
           <div>
             <div className="flex items-center gap-2 mb-3">
-              <div className="h-5 w-5 rounded bg-rose flex items-center justify-center">
-                <span className="text-[8px] font-bold text-white leading-none">A</span>
-              </div>
-              <span className="text-[13px] sm:text-[14px] font-bold text-plum">
+              <Image
+                src="/ask-logo-icon.png"
+                alt="AKS Intelligent Systems"
+                width={20}
+                height={20}
+                className="h-5 w-5 shrink-0 object-contain"
+              />
+              <span className="text-[13px] sm:text-[14px] font-bold text-plum leading-tight">
                 AKS Intelligent Systems LLP
               </span>
             </div>
