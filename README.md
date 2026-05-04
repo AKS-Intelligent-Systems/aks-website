@@ -249,7 +249,7 @@ The output in `.next/` can be served by any static file server. For a pure stati
 | PAN       | ACNFA7427J                                             |
 | TAN       | RTKA34008C                                             |
 | Address   | 602, Sector 84, Antriksh Heights, Tower-AI, Narsinghpur, Gurgaon, 122004, Haryana, India |
-| Email     | info@aksisys.com, piyush@aksisys.com                   |
+| Email     | info@aksisys.com, avish@aksisys.com                    |
 
 ### Leadership
 
@@ -257,7 +257,7 @@ The output in `.next/` can be served by any static file server. For a pure stati
 | ------------- | ------------------- |
 | Avnish Kumar  | Designated Partner  |
 | Sudesh        | Designated Partner  |
-| Piyush Gupta  | Head of Operations  |
+| Avish Dahiya  | CEO / Chief Executive Officer |
 
 ### Service Areas
 

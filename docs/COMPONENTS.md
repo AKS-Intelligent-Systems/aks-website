@@ -213,7 +213,7 @@ Displays the three members of the leadership team in card format.
 | ------------- | ------------------- | -------- | ----------- |
 | Avnish Kumar  | Designated Partner  | AK       | `bg-plum`   |
 | Sudesh        | Designated Partner  | SD       | `bg-mauve`  |
-| Piyush Gupta  | Head of Operations  | PG       | `bg-rose`   |
+| Avish Dahiya  | CEO / Chief Executive Officer | AD       | `bg-rose`   |
 
 ### Card Design
 
@@ -244,7 +244,7 @@ Dark call-to-action section encouraging visitors to get in touch. Contains conta
 
 - **Heading:** "Let's solve your operational challenges."
 - **Subtext:** "Reach out to discuss how AI and automation can transform your workflows."
-- **Emails:** info@aksisys.com and piyush@aksisys.com (both mailto links with envelope icons)
+- **Emails:** info@aksisys.com and avish@aksisys.com (both mailto links with envelope icons)
 - **CTA:** "Get in Touch" button linking to `mailto:info@aksisys.com`
 
 ### Section ID

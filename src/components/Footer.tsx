@@ -33,8 +33,8 @@ export default function Footer() {
               <a href="mailto:info@aksisys.com" className="block text-[11px] sm:text-[12px] text-plum/50 hover:text-plum transition-colors">
                 info@aksisys.com
               </a>
-              <a href="mailto:piyush@aksisys.com" className="block text-[11px] sm:text-[12px] text-plum/50 hover:text-plum transition-colors">
-                piyush@aksisys.com
+              <a href="mailto:avish@aksisys.com" className="block text-[11px] sm:text-[12px] text-plum/50 hover:text-plum transition-colors">
+                avish@aksisys.com
               </a>
             </div>
           </div>

@@ -16,10 +16,10 @@ const team = [
     color: "bg-mauve",
   },
   {
-    name: "Piyush Gupta",
-    role: "Head of Operations",
-    description: "Leads operations, execution, and deployment coordination.",
-    initials: "PG",
+    name: "Avish Dahiya",
+    role: "CEO / Chief Executive Officer",
+    description: "Drives company vision, strategy, and overall execution.",
+    initials: "AD",
     color: "bg-rose",
   },
 ];

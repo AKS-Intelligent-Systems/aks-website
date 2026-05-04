@@ -113,7 +113,7 @@ Scrolling service tags:
 | ------------- | ------------------- | --------------------------------------------------------- |
 | Avnish Kumar  | Designated Partner  | Leads strategic direction and organizational oversight.   |
 | Sudesh        | Designated Partner  | Supports business leadership and institutional development.|
-| Piyush Gupta  | Head of Operations  | Leads operations, execution, and deployment coordination. |
+| Avish Dahiya  | CEO / Chief Executive Officer | Drives company vision, strategy, and overall execution.   |
 
 ---
 
@@ -122,7 +122,7 @@ Scrolling service tags:
 - **Heading:** Let's solve your operational challenges.
 - **Subtext:** Reach out to discuss how AI and automation can transform your workflows.
 - **Email 1:** info@aksisys.com
-- **Email 2:** piyush@aksisys.com
+- **Email 2:** avish@aksisys.com
 - **CTA button:** Get in Touch (mailto:info@aksisys.com)
 
 ---
@@ -137,7 +137,7 @@ Scrolling service tags:
 ### Contact
 
 - info@aksisys.com
-- piyush@aksisys.com
+- avish@aksisys.com
 
 ### Navigation
 
