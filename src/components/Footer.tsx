@@ -53,10 +53,10 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-blush/40 pt-5 sm:pt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
-          <p className="text-[10px] sm:text-[11px] text-plum/30">
+          <p className="text-[11px] sm:text-[12px] font-medium text-plum/55">
             &copy; {new Date().getFullYear()} AKS Intelligent Systems LLP. All rights reserved.
           </p>
-          <div className="flex flex-wrap items-center gap-x-3 sm:gap-x-4 gap-y-1 text-[9px] sm:text-[10px] text-plum/25">
+          <div className="flex flex-wrap items-center gap-x-3 sm:gap-x-4 gap-y-1 text-[11px] sm:text-[12px] font-medium text-plum/55">
             <span>LLPIN: ACW-4965</span>
             <span>PAN: ACNFA7427J</span>
             <span>GSTIN: 06ACNFA7427J1Z3</span>
