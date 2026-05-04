@@ -276,7 +276,7 @@ Three-column grid on desktop (`md`+):
 2. **Column 2 (1fr):** Contact emails (mailto links)
 3. **Column 3 (1fr):** Navigation links (Services, About, Leadership, Contact)
 
-Below the grid, a divider line separates the copyright notice and legal identifiers (LLPIN, PAN, TAN).
+Below the grid, a divider line separates the copyright notice and legal identifiers (LLPIN, PAN, GSTIN).
 
 ### Responsiveness
 

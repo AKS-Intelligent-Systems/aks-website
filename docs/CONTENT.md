@@ -151,4 +151,4 @@ Scrolling service tags:
 - **Copyright:** (c) [current year] AKS Intelligent Systems LLP. All rights reserved.
 - **LLPIN:** ACW-4965
 - **PAN:** ACNFA7427J
-- **TAN:** RTKA34008C
+- **GSTIN:** 06ACNFA7427J1Z3

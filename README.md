@@ -247,7 +247,7 @@ The output in `.next/` can be served by any static file server. For a pure stati
 | Type      | Limited Liability Partnership (LLP)                    |
 | LLPIN     | ACW-4965                                               |
 | PAN       | ACNFA7427J                                             |
-| TAN       | RTKA34008C                                             |
+| GSTIN     | 06ACNFA7427J1Z3                                        |
 | Address   | 602, Sector 84, Antriksh Heights, Tower-AI, Narsinghpur, Gurgaon, 122004, Haryana, India |
 | Email     | info@aksisys.com, avish@aksisys.com                    |
 

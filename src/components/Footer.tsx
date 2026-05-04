@@ -59,7 +59,7 @@ export default function Footer() {
           <div className="flex flex-wrap items-center gap-x-3 sm:gap-x-4 gap-y-1 text-[9px] sm:text-[10px] text-plum/25">
             <span>LLPIN: ACW-4965</span>
             <span>PAN: ACNFA7427J</span>
-            <span>TAN: RTKA34008C</span>
+            <span>GSTIN: 06ACNFA7427J1Z3</span>
           </div>
         </div>
       </div>
